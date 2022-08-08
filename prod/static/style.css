@@ -7,10 +7,77 @@ body {
 header {
     background-color: rgb(51, 96, 136);
     color: white;
-    height: 120px;
+    height: 100px;
     width: 100%;
+    padding-top: 10px;
 }
 
 header h1 {
     text-shadow: 0 0 5px black;
+}
+
+footer {
+    position: absolute;
+    top: 680px;
+    height: 20px;
+    width: 100%;
+    background-color: rgb(20, 20, 26);
+}
+
+footer h6 {
+    color: white;
+    text-align: center;
+}
+
+.titre {
+    text-align: center;
+    background-color: white;
+    height: 35px;
+    display: inline-block;
+    width: 100%;
+}
+
+.titre h4 {
+    position: absolute;
+    top: 93px;
+    float: left;
+    margin-left: 5%;
+}
+
+.titre input {
+    position: relative;
+    top: 7px;
+    float: right;
+    margin-right: 5%;
+    margin-top: 10x;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: rgb(84, 88, 92);
+    height: 90%;
+    position: absolute;
+    letter-spacing: 1px;
+}
+
+ul {
+    list-style: none;
+}
+
+.sidebar ul a {
+    display: block;
+    height: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    width: 100%;
+    line-height: 40px;
+    padding-left: 10px;
+    transition: .5s;
+    text-decoration: none;
+    text-shadow: 0 0 5px black;
+}
+
+ul li:hover a {
+    padding-left: 30px;
+    letter-spacing: 1px;
 }
