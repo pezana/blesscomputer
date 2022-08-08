@@ -4,5 +4,5 @@ from . import approv
 
 urlpatterns = [
     path('',views.acceuil,name='acceuil'),
-    path('/Approvisionnement',approv.redirectionapprov,name='approvLien')    
+    path('Approvisionnement',approv.redirectionapprov,name='approvLien')    
 ]
