@@ -1,0 +1,16 @@
+body {
+    font-family: 'Open Sans', Arial, sans-serif, Helvetica;
+    background-color: rgb(221, 235, 235);
+    margin: 0
+}
+
+header {
+    background-color: rgb(51, 96, 136);
+    color: white;
+    height: 120px;
+    width: 100%;
+}
+
+header h1 {
+    text-shadow: 0 0 5px black;
+}
