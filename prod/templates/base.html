@@ -27,7 +27,7 @@
                 <a href="{% url 'prodLien' %}">Production</a>
             </li>
             <li>
-                <a href="">Etape</a>
+                <a href="{% url 'EtapeLien' %}">Etape</a>
             </li>
             <li>
                 <a href="">Stock Approvisionnement</a>
@@ -42,7 +42,7 @@
                 <a href="">Client</a>
             </li>
             <li>
-                <a href="">fournisseur</a>
+                <a href="{% url 'fournisseurLien' %}">fournisseur</a>
             </li>
         </ul>
     </div>
@@ -56,10 +56,7 @@
             </div>
         </div>
         {%block contenu %}{% endblock contenu %}
-    </div> 
+    </div>
 </body>
-<footer>
-    <h6> la production à la rencontre de nos cultures</h6>
-</footer>
 
 </html>
