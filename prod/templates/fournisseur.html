@@ -1,1 +1,62 @@
-{% extends 'base.html' %} {% block titre %} Fournisseur {% endblock titre %}
+{% extends 'base.html' %} {% block titre %} Fournisseur 
+<div class="table_responsive">
+    <table>
+      <thead>
+        <tr>
+          <th>N°</th>
+          <th>Nom Fournisseur</th>
+          <th>Code Fournisseur</th>
+          <th>Date</th>
+          <th>Detail</th>
+          <th>Modification</th>
+          <th>Supprimer</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>01</td>
+          <td>Fotso Franck</td>
+          <td>0001</td>
+          <td>01/02/2022</td>
+          <td>
+            <span class="action_btn">
+                <a href="#">Detail</a>
+              </span>
+          </td>
+          <td>
+            <span class="action_btn">
+              <a href="#">Modification</a>
+            </span>
+          </td>
+          <td>
+            <span class="action_btn">
+                <a href="#">Supprimer</a>
+              </span>
+          </td>
+        </tr>
+
+        <tr>
+            <td>02</td>
+            <td>Kamga Franck</td>
+            <td>0001</td>
+            <td>01/02/2021</td>
+            <td>
+              <span class="action_btn">
+                  <a href="#">Detail</a>
+                </span>
+            </td>
+            <td>
+              <span class="action_btn">
+                <a href="#">Modification</a>
+              </span>
+            </td>
+            <td>
+              <span class="action_btn">
+                  <a href="#">Supprimer</a>
+                </span>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+{% endblock titre %}
