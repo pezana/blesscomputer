@@ -17,10 +17,6 @@
             {% block connexion %} {% endblock %}
         </div>
     </header>
-    <div class="titre">
-        <h4> {% block titre %} {% endblock titre %}</h4>
-        <input type="button" value="Ajouter">
-    </div>
     <div class="sidebar">
         <ul>
             <li> <a href="{% url 'acceuil' %}">Acceuil</a></li>
@@ -49,6 +45,18 @@
                 <a href="">fournisseur</a>
             </li>
         </ul>
+    </div>
+    <div class="contenu">
+        <div class="titre">
+            <h4> {% block titre %} {% endblock titre %}</h4>
+            <!-- <input type="button" value="Ajouter"> -->
+            <div class="barbtn">
+                {% block barbtn %}<input type="button" value="Ajouter"> {% endblock barbtn %}
+                <!-- <input type="button" value="Ajouter"> -->
+            </div>
+        </div>
+
+        {%block contenu %}{% endblock contenu %}
     </div>
     <footer>
         <h6> la production à la rencontre de nos cultures</h6>
