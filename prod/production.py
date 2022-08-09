@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from prod.models import *
+from .models import *
 
 
 def redirectionproduction(request):
-     return render(request,'production.html')
+     listeprod=production.objects.all()
+     return render(request,'production.html',{'liste':listeprod})
