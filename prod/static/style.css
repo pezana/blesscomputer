@@ -39,13 +39,15 @@ footer h6 {
 
 .titre h4 {
     margin-bottom: -17px;
-    /* margin-left: 5%; */
+    margin-left: 5px;
 }
 
 .titre input {
+    position: relative;
+    top: -40px;
     float: right;
-    margin-right: 5%;
-    margin-bottom: -20px;
+    margin-right: 5px;
+    margin-bottom: 20px;
 }
 
 .sidebar {
