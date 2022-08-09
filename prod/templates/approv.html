@@ -1,1 +1,70 @@
-{% extends 'base.html' %} {% block titre %} Approvisionnement {% endblock titre %}
+{% extends 'base.html' %} {% block titre %} Approvisionnement 
+
+
+
+<div class="table_responsive">
+    <table>
+      <thead>
+        <tr>
+          <th>N°</th>
+          <th>Code Approv</th>
+          <th>Quantite Approv</th>
+          <th>Date</th>
+          <th>Detail</th>
+          <th>Modification</th>
+          <th>Supprimer</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>01</td>
+          <td>A001</td>
+          <td>24</td>
+          <td>01/02/2022</td>
+          <td>
+            <span class="action_btn">
+                <a href="#">Detail</a>
+              </span>
+          </td>
+          <td>
+            <span class="action_btn">
+              <a href="#">Modification</a>
+            </span>
+          </td>
+          <td>
+            <span class="action_btn">
+                <a href="#">Supprimer</a>
+              </span>
+          </td>
+        </tr>
+
+        <tr>
+            <td>02</td>
+            <td>A002</td>
+            <td>57</td>
+            <td>01/08/2022</td>
+            <td>
+              <span class="action_btn">
+                  <a href="#">Detail</a>
+                </span>
+            </td>
+            <td>
+              <span class="action_btn">
+                <a href="#">Modification</a>
+              </span>
+            </td>
+            <td>
+              <span class="action_btn">
+                  <a href="#">Supprimer</a>
+                </span>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+
+
+{% endblock titre %}
