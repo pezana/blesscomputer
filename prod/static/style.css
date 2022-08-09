@@ -38,13 +38,15 @@ footer h6 {
 }
 
 .titre h4 {
-    margin-bottom: -17px;
-    margin-left: 5px;
+    margin-bottom: 0px;
+    margin-left: 3px;
+    position: relative;
+    top: -13px;
 }
 
 .titre input {
     position: relative;
-    top: -40px;
+    top: -35px;
     float: right;
     margin-right: 5px;
     margin-bottom: 20px;
