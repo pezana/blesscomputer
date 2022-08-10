@@ -1,10 +1,7 @@
-{% extends 'base.html' %} {% block titre %} Approvisionnement {% endblock titre %} {% block barbtn %}<input type="button" value="Ajouter"> {% endblock barbtn %}
-
-
-
-{%block contenu %}
-<!-- debut du style de mon tableau approvisionnement -->
-<style>
+{% extends 'base.html' %} {% block titre %}
+ client {% endblock titre %} {% block barbtn %}<input type="button" value="Ajouter"> {% endblock barbtn %}
+ {%block contenu %}
+ <style>
     /* Style pour table fournisseur */
     * {
             box-sizing: border-box;
@@ -16,8 +13,8 @@
         }
         .table_responsive {
             position: relative;
-            top: -27%;
-            max-width: 1040px;
+            top: -23%;
+            max-width: 1000px;
             border: 0px solid #00bcd4;
             background-color: #efefef33;
             padding: 15px;
@@ -90,20 +87,18 @@
         }
 
 </style>
-<!-- fin du style de mon tableau approvisionnement -->
 
 
-<!-- debut du code de mon tableau -->
 <div class="table_responsive">
     <table>
       <thead>
         <tr>
-          <th>N°</th>
-          <th>Date</th>
-          <th>Cout Achat</th>
-          <th>Cout Supplementaire</th>
-          <th>Fournisseur</th>
-          <th>Detailles</th>
+          <th>N</th>
+          <th>Nom</th>
+          <th>Adresse</th>
+          <th>Telephone</th>
+          <th>Type</th>
+          <th>Detail</th>
           <th>Modification</th>
           <th>Supprimer</th>
         </tr>
@@ -112,10 +107,10 @@
         {% for elt in liste %}
             <tr>
                 <td>{{ forloop.counter}}</td>
-                <td>{{ elt.dte }}</td>
-                <td>{{ elt.coutachat }}</td>
-                <td>{{ elt.coutsupp }}</td>
-                <td>{{ elt.fournisseur }}</td>
+                <td>{{ elt.nom }}</td>
+                <td>{{ elt.adress }}</td>
+                <td>{{ elt.tel }}</td>
+                <td>{{ elt.typeclient }}</td>
                 <td>
                     <span class="action_btn">
                 <a href="#">Detail</a>
@@ -136,5 +131,4 @@
       </tbody>
     </table>
   </div>
-  <!-- fin du code de mon tableau approvisionnement -->
-{% endblock contenu %}
+  {% endblock contenu %}

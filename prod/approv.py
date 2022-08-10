@@ -3,4 +3,5 @@ from prod.models import *
 
 
 def redirectionapprov(request):
-     return render(request,'approv.html')
+     listeapprov=approvisionnement.objects.all()
+     return render(request,'approv.html',{'liste':listeapprov})
