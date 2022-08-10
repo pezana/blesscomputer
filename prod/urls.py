@@ -4,7 +4,7 @@ from . import approv
 from . import production
 from . import fournisseur
 from . import fen_EtapeDeProduction
-
+from . import client
 
 
 urlpatterns = [
@@ -12,6 +12,7 @@ urlpatterns = [
     path('Approvisionnement',approv.redirectionapprov,name='approvLien'), 
     path('Production',production.redirectionproduction,name='prodLien'),
     path('Fournisseur',fournisseur.redirectionfournisseur,name='fournisseurLien'),
-    path('Etape', fen_EtapeDeProduction.redirectionEtape, name='EtapeLien') 
+    path('Etape', fen_EtapeDeProduction.redirectionEtape, name='EtapeLien'),
+    path('client', client.redirectionclient, name='clientLien')
 
 ]
