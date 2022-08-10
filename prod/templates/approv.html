@@ -1,5 +1,9 @@
-{% extends 'base.html' %} {% block titre %} Approvisionnement {% endblock titre %}
+{% extends 'base.html' %} {% block titre %} Approvisionnement {% endblock titre %} {% block barbtn %}<input type="button" value="Ajouter"> {% endblock barbtn %}
+
+
+
 {%block contenu %}
+<!-- debut du style de mon tableau approvisionnement -->
 <style>
     /* Style pour table fournisseur */
     * {
@@ -86,88 +90,51 @@
         }
 
 </style>
+<!-- fin du style de mon tableau approvisionnement -->
 
 
+<!-- debut du code de mon tableau -->
 <div class="table_responsive">
     <table>
       <thead>
         <tr>
           <th>N°</th>
-          <th>Code Approv</th>
-          <th>Quantite Approv</th>
           <th>Date</th>
-          <th>Detail</th>
+          <th>Cout Achat</th>
+          <th>Cout Supplementaire</th>
+          <th>Fournisseur</th>
+          <th>Detailles</th>
           <th>Modification</th>
           <th>Supprimer</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>01</td>
-          <td>A0001</td>
-          <td>45</td>
-          <td>01/02/2022</td>
-          <td>
-            <span class="action_btn">
+        {% for elt in liste %}
+            <tr>
+                <td>{{ forloop.counter}}</td>
+                <td>{{ elt.dte }}</td>
+                <td>{{ elt.coutachat }}</td>
+                <td>{{ elt.coutsupp }}</td>
+                <td>{{ elt.fournisseur }}</td>
+                <td>
+                    <span class="action_btn">
                 <a href="#">Detail</a>
               </span>
-          </td>
-          <td>
-            <span class="action_btn">
+                </td>
+                <td>
+                    <span class="action_btn">
               <a href="#">Modification</a>
             </span>
-          </td>
-          <td>
-            <span class="action_btn">
+                </td>
+                <td>
+                    <span class="action_btn">
                 <a href="#">Supprimer</a>
               </span>
-          </td>
-        </tr>
-
-        <tr>
-            <td>02</td>
-            <td>A002</td>
-            <td>650</td>
-            <td>01/02/2022</td>
-            <td>
-              <span class="action_btn">
-                  <a href="#">Detail</a>
-                </span>
-            </td>
-            <td>
-              <span class="action_btn">
-                <a href="#">Modification</a>
-              </span>
-            </td>
-            <td>
-              <span class="action_btn">
-                  <a href="#">Supprimer</a>
-                </span>
-            </td>
-          </tr>
-
-        <tr>
-            <td>03</td>
-            <td>A003</td>
-            <td>70</td>
-            <td>23/02/2021</td>
-            <td>
-              <span class="action_btn">
-                  <a href="#">Detail</a>
-                </span>
-            </td>
-            <td>
-              <span class="action_btn">
-                <a href="#">Modification</a>
-              </span>
-            </td>
-            <td>
-              <span class="action_btn">
-                  <a href="#">Supprimer</a>
-                </span>
-            </td>
-          </tr>
+                </td>
+            </tr>
+            {% endfor %}
       </tbody>
     </table>
   </div>
+  <!-- fin du code de mon tableau approvisionnement -->
 {% endblock contenu %}
