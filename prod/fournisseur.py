@@ -3,4 +3,5 @@ from prod.models import *
 
 
 def redirectionfournisseur(request):
-     return render(request,'fournisseur.html')
+     FournisseurList = fournisseur.objects.all()
+     return render(request,'fournisseur.html', {'listFournisseur':FournisseurList})
