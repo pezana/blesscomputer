@@ -1,0 +1,41 @@
+{% extends 'base.html' %} 
+{% block titre %}Etape de production/Detail{% endblock titre %} 
+{% block barbtn %}
+<input type="button" value="Ajouter">
+<input type="button" value="modifier">
+<input type="button" value="supprimer">
+{% endblock barbtn %}
+ 
+
+
+{% block contenu %}
+
+    <style>
+        .container {
+            position: relative;
+            top: 50px;
+            max-width: 600px;
+            border: 0px solid #00bcd4;
+            background-color: #efefef33;
+            padding: 15px;
+            overflow: auto;
+            margin: auto;
+            border-radius: 4px;
+        }
+        .container label{
+            margin-top:10px;
+            display:block;
+            margin-right:50px;
+        }
+    </style>
+
+    <div class ="container">
+    
+        <form action = "" method = "get"> 
+            <label for="your_name">libelle :</label>{{ undetail.libelle }}<br/>   
+            <label for="your_name"> quantite de dechet :</label>{{ undetail.qtedechet }} <br/>
+        </form>
+     
+    </div>
+    
+{% endblock contenu %}

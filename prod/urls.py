@@ -15,6 +15,6 @@ urlpatterns = [
     path('Fournisseur',fournisseur.redirectionfournisseur,name='fournisseurLien'),
     path('Etape', fen_EtapeDeProduction.redirectionEtape, name='EtapeLien'),
     path('client', client.redirectionclient, name='clientLien'),
-    path('stockVente', fen_stockAVendre.redirectionstockvente, name='stockeventeLien')
-
+    path('stockVente', fen_stockAVendre.redirectionstockvente, name='stockeventeLien'),
+    path('detailetape/<id>', fen_EtapeDeProduction.voirDetail, name='undetail')
 ]
