@@ -1,5 +1,5 @@
 {% extends 'base.html' %} {% block titre %}
- client {% endblock titre %}
+ client {% endblock titre %} {% block barbtn %}<input type="button" value="Ajouter"> {% endblock barbtn %}
  {%block contenu %}
  <style>
     /* Style pour table fournisseur */
@@ -104,95 +104,30 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-            <td>o1</td>
-            <td>lawan</td>
-          <td>jordanyves40@gmail.com</td>
-          <td>+237---------</td>
-          <td>inconnue</td>
-          <td>
-            <span class="action_btn">
+        {% for elt in liste %}
+            <tr>
+                <td>{{ forloop.counter}}</td>
+                <td>{{ elt.nom }}</td>
+                <td>{{ elt.adress }}</td>
+                <td>{{ elt.tel }}</td>
+                <td>{{ elt.typeclient }}</td>
+                <td>
+                    <span class="action_btn">
                 <a href="#">Detail</a>
               </span>
-          </td>
-          <td>
-            <span class="action_btn">
+                </td>
+                <td>
+                    <span class="action_btn">
               <a href="#">Modification</a>
             </span>
-          </td>
-          <td>
-            <span class="action_btn">
+                </td>
+                <td>
+                    <span class="action_btn">
                 <a href="#">Supprimer</a>
               </span>
-          </td>
-        </tr>
-          <td>02</td>
-          <td>lounga</td>
-          <td>jordanyves40@gmail.com</td>
-          <td>+237---------</td>
-          <td>inconnue</td>
-          <td>
-            <span class="action_btn">
-                <a href="#">Detail</a>
-              </span>
-          </td>
-          <td>
-            <span class="action_btn">
-              <a href="#">Modification</a>
-            </span>
-          </td>
-          <td>
-            <span class="action_btn">
-                <a href="#">Supprimer</a>
-              </span>
-          </td>
-        </tr>
-
-        <tr>
-            <td>03</td>
-            <td>yves</td>
-            <td>yvesking33@gmail.com</td>
-            <td>+237---------</td>
-            <td>inconnue</td>
-            <td>
-              <span class="action_btn">
-                  <a href="#">Detail</a>
-                </span>
-            </td>
-            <td>
-              <span class="action_btn">
-                <a href="#">Modification</a>
-              </span>
-            </td>
-            <td>
-              <span class="action_btn">
-                  <a href="#">Supprimer</a>
-                </span>
-            </td>
-          </tr>
-
-        <tr>
-            <td>04</td>
-            <td>athur</td>
-            <td>arthur33@gmail.com</td>
-            <td>+237--------</td>
-            <td>inconnue</td>
-            <td>
-              <span class="action_btn">
-                  <a href="#">Detail</a>
-                </span>
-            </td>
-            <td>
-              <span class="action_btn">
-                <a href="#">Modification</a>
-              </span>
-            </td>
-            <td>
-              <span class="action_btn">
-                  <a href="#">Supprimer</a>
-                </span>
-            </td>
-          </tr>
+                </td>
+            </tr>
+            {% endfor %}
       </tbody>
     </table>
   </div>

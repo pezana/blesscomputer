@@ -3,4 +3,5 @@ from prod.models import *
 
 
 def redirectionclient(request):
-     return render(request,'client.html')
+    listeclient=client.objects.all()
+    return render(request,'client.html',{'liste':listeclient})
