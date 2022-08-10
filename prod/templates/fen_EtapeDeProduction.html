@@ -22,7 +22,7 @@
     
     .table_responsive {
         position: relative;
-        top: -250px;
+        top: -27%;
         max-width: 1000px;
         border: 0px solid #00bcd4;
         background-color: #efefef33;
@@ -118,7 +118,7 @@
                 <th>production</th>             
                 <th>Detais</th>
                 <th>Modifier</th>
-                <th> Supprimer</th>
+                <th>Supprimer</th>
             </tr>
         </thead>
         <tbody>
@@ -130,7 +130,7 @@
                 <td>{{ elt.prod.codeprod}}</td>
                 <td>
                     <span class="action_btn">
-                <a href="#">Detail</a>
+                <a href="{% url 'undetail' elt.id %}">Detail</a>
               </span>
                 </td>
                 <td>
