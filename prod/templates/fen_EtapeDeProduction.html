@@ -114,11 +114,8 @@
             <tr>
                 <th>N°</th>
                 <th>libelle</th>
-                <th>Qte produite</th>
-                <th>Qte dechet</th>
-                <th>production</th>
-                <th>coutdeletape</th>
-                <th>Desciption</th>
+                <th>Qte produite</th>               
+                <th>production</th>             
                 <th>Detais</th>
                 <th>Modifier</th>
                 <th> Supprimer</th>
@@ -130,10 +127,7 @@
                 <td>{{ forloop.counter}}</td>
                 <td>{{ elt.libelle }}</td>
                 <td>{{ elt.qteproduite}}</td>
-                <td>{{ elt.qtedechet }}</td>
-                <td>{{ elt.prod }}</td>
-                <td>{{ elt.coutdeletape}}</td>
-                <td>{{ elt.description }}</td>
+                <td>{{ elt.prod.codeprod}}</td>
                 <td>
                     <span class="action_btn">
                 <a href="#">Detail</a>
