@@ -1,6 +1,6 @@
-{% extends 'base.html' %} {% block titre %}
- client {% endblock titre %} {% block barbtn %}<input type="button" value="Ajouter"> {% endblock barbtn %}
- {%block contenu %}
+{% extends 'base.html' %} {% block titre %} client {% endblock titre %} {% block barbtn %}
+<a href="{% url 'ajoutclientlien' %}">Ajouter</a> {% endblock barbtn %} 
+{% block contenu %}
  <style>
     /* Style pour table fournisseur */
     * {
