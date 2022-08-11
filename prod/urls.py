@@ -16,14 +16,9 @@ urlpatterns = [
     path('Etape', fen_EtapeDeProduction.redirectionEtape, name='EtapeLien'),
     path('client', client.redirectionclient, name='clientLien'),
     path('stockVente', fen_stockAVendre.redirectionstockvente, name='stockeventeLien'),
-<<<<<<< HEAD
-    path('Fournisseur/<id>', fournisseur.voirfournisseur, name='detailfournisseur'),
-=======
-<<<<<<< HEAD
-    path('detailsproduit/<id>', production.detailproduit, name='detailproduit' )
 
-=======
->>>>>>> 647f79419a7f74072e07616df0af73a7cc40fd81
-    path('detailetape/<id>', fen_EtapeDeProduction.voirDetail, name='undetail')
->>>>>>> c36e316e0dc930a93a6cbfe5b8eef7dcc60dfd4c
+    path('Fournisseur/<id>', fournisseur.voirfournisseur, name='detailfournisseur'),
+    path('detailsproduit/<id>', production.detailproduit, name='detailproduit' ),
+    path('detailetape/<id>', fen_EtapeDeProduction.voirDetail, name='undetail'),
+    path('detailaprov/<id>', approv.voirApprov, name='mondetail'),
 ]
