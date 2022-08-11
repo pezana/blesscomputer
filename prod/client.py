@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from prod.models import *
+from django.shortcuts import get_object_or_404
 
 
 def redirectionclient(request):
@@ -7,5 +8,5 @@ def redirectionclient(request):
     return render(request,'client.html',{'liste':listeclient})
 
 def detailclient(request, id):
-    detailclient= client.objects.get(id=id)
-    return render(request,'detailclient.html',{'liste':detailclient})
+    voir_client= get_object_or_404(client, id= id)
+    return render(request,'detailclient.html',{'maliste': voir_client})
