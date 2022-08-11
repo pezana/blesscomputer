@@ -1,7 +1,9 @@
 {% extends 'base.html' %} 
-{% block titre %}Etape de production/Detail{% endblock titre %} 
+{% block titre %}client/Detail{% endblock titre %} 
 {% block barbtn %}
 <input type="button" value="Ajouter">
+<input type="button" value="modifier">
+<input type="button" value="supprimer">
 {% endblock barbtn %}
  
 
@@ -40,18 +42,14 @@
 
     <div class ="container">
             <dl id="carl">
-                <dt> libelle:</dt>
-                <dd>{{ undetail.libelle }}</dd>
-                <dt> quantite produite :</dt>
-                <dd>{{ undetail.qteproduite }}</dd>
-                <dt> quantite de dechet :</dt>
-                <dd>{{ undetail.qtedechet }} </dd>
-                <dt> code de production :</dt>
-                <dd>{{ undetail.prod.codeprod }}</dd>
-                <dt> cout de la production :</dt>
-                <dd>{{ undetail.coutdeletape }} XAF</dd>
-                <dt> designation :</dt>
-                <dd>{{ undetail.description }} </dd>
+                <dt> nom:</dt>
+                <dd>{{ maliste.nom }}</dd>
+                <dt> adresse :</dt>
+                <dd>{{ maliste.adress }}</dd>
+                <dt> telephone :</dt>
+                <dd>{{ maliste.tel }} </dd>
+                <dt> type de client :</dt>
+                <dd>{{ maliste.typeclient }}</dd>
             </dl>
     </div>
     

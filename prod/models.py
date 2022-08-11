@@ -18,6 +18,8 @@ class production(models.Model):
     qte=models.IntegerField(default=0)
     dteprod=models.DateField(blank=True,null=True)
     qtedechet=models.IntegerField(default=0)
+    def __str__(self):
+        return self.codeprod
 
 class etape(models.Model):
     libelle=models.CharField(max_length=100)  

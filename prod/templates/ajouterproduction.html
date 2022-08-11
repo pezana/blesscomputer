@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% block titre %} Production / ajouter une nouvelle production {% endblock titre %} {% block barbtn %}{% endblock barbtn %} {%block contenu %}
+<style>
+    #msg {
+        background-color: green;
+    }
+</style>
+<center>
+    <h2 id="msg">{{msg}}</h2>
+    <form action="{% url 'ajoutproductionlien' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token%} {{ form.as_p}}
+        <button type="submit">enregistrer</button>
+    </form>
+</center>
+
+{%endblock contenu %}
