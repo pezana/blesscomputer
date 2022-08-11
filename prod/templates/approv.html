@@ -1,4 +1,6 @@
-{% extends 'base.html' %} {% block titre %} Approvisionnement {% endblock titre %} {% block barbtn %}<input type="button" value="Ajouter"> {% endblock barbtn %}
+{% extends 'base.html' %} 
+{% block titre %} Approvisionnement {% endblock titre %} 
+{% block barbtn %}<input type="button" value="Ajouter"> {% endblock barbtn %}
 
 
 
@@ -118,7 +120,7 @@
                 <td>{{ elt.fournisseur }}</td>
                 <td>
                     <span class="action_btn">
-                <a href="#">Detail</a>
+                <a href="{% url 'mondetail' elt.id %}">Detail</a>
               </span>
                 </td>
                 <td>
