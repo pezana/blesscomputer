@@ -1,6 +1,5 @@
-{% extends 'base.html' %} {% block titre %} Fournisseur{% endblock titre %}
-{%block contenu %}
-{% block barbtn %} {% endblock barbtn %}
+{% extends 'base.html' %} {% block titre %} Utilisateur {% endblock titre %} {% block barbtn %}
+<a href="{% url 'ajoutfournisseurlien' %}">Ajouter</a> {% endblock barbtn %} {% block contenu %}
 <style>
     /* Style pour table fournisseur */
     * {
@@ -13,7 +12,7 @@
         }
         .table_responsive {
             position: relative;
-            top: -200px;
+            top: 5px;
             max-width: 1000px;
             border: 0px solid #00bcd4;
             background-color: #efefef33;
