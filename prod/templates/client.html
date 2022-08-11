@@ -13,7 +13,7 @@
         }
         .table_responsive {
             position: relative;
-            top: -23%;
+            top: -34%;
             max-width: 1000px;
             border: 0px solid #00bcd4;
             background-color: #efefef33;
@@ -113,7 +113,7 @@
                 <td>{{ elt.typeclient }}</td>
                 <td>
                     <span class="action_btn">
-                <a href="#">Detail</a>
+                <a href="{% url 'detailclient' elt.id %}">Detail</a>
               </span>
                 </td>
                 <td>
