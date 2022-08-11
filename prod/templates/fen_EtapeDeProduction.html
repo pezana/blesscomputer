@@ -1,9 +1,7 @@
 {% extends 'base.html' %} 
 {% block titre %}Etape de la production{% endblock titre %} 
 {% block barbtn %}
-<input type="button" value="Ajouter">
-<!-- <input type="button" value="modifier">
-<input type="button" value="supprimer"> -->
+<a href="{% url 'Lien_Ajout_Etape'%}"> <input type="button" value="Ajouter"> </a>
 {% endblock barbtn %}
 
 {% block contenu %}

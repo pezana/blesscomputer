@@ -21,17 +21,7 @@ urlpatterns = [
     path('detailetape/<id>', fen_EtapeDeProduction.voirDetail, name='undetail'),
     path('detailclient/<id>', client.detailclient, name='maliste' ),
     path('detailaprov/<id>', approv.voirApprov, name='mondetail'),
-    path('Fournisseur/<id>', fournisseur.voirfournisseur, name='detailfournisseur'),
-    path('detailsproduit/<id>', production.detailproduit, name='detailproduit' ),
-    path('detailetape/<id>', fen_EtapeDeProduction.voirDetail, name='undetail'),
-    path('detailclient/<id>', client.detailclient, name='detailclient' ),
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
     path('ajouterproduction',production.ajoutproduction,name='ajoutproductionlien'),
+    path('ajouterEtapeProd',fen_EtapeDeProduction.fonc_ajouter,name='Lien_Ajout_Etape'),
     
-=======
->>>>>>> 6c1edad035dcd46ae6494f941040f1e5ec92e09e
->>>>>>> f3814e2cce3a732977fcfa8492d7efe9fa4117f0
 ]
