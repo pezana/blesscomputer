@@ -19,4 +19,11 @@ urlpatterns = [
     path('Fournisseur/<id>', fournisseur.voirfournisseur, name='detailfournisseur'),
     path('detailsproduit/<id>', production.detailproduit, name='detailproduit' ),
     path('detailetape/<id>', fen_EtapeDeProduction.voirDetail, name='undetail'),
+    path('detailclient/<id>', client.detailclient, name='maliste' ),
+    path('detailaprov/<id>', approv.voirApprov, name='mondetail'),
+    path('Fournisseur/<id>', fournisseur.voirfournisseur, name='detailfournisseur'),
+    path('detailsproduit/<id>', production.detailproduit, name='detailproduit' ),
+    path('detailetape/<id>', fen_EtapeDeProduction.voirDetail, name='undetail'),
+    path('detailclient/<id>', client.detailclient, name='detailclient' ),
+
 ]

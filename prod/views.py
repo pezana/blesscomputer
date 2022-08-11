@@ -1,5 +1,4 @@
-from django.shortcuts import render , redirect
-from.formulaire import fournisseurForm
+from django.shortcuts import render
 
 # Create your views here.
 def acceuil(request):
