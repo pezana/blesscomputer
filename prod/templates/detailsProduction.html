@@ -1,0 +1,55 @@
+{% extends 'base.html' %} {% block titre %} Production/Détails {{liste.codeprod}} {% endblock titre %} 
+{% block barbtn %}<input type="button" value="Retour"><input type="button" value="Imprimer"><input type="button" value="Ajouter">  {% endblock barbtn %}
+
+{% block contenu %}
+<style>
+    .PROD{
+        margin-top: 15%;
+        line-height: 20px;
+        margin-left: 25%;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 20px;
+        
+    }
+   
+
+    #lib dt{
+        display: block;
+        width: 250px;
+        float: left;
+        text-align: left;
+        padding: 0 10px 00;
+        font-weight: bold;
+    }
+    #lib dl dd{
+        display: block;
+      
+        
+    }
+</style>
+<div class="PROD">
+    <form class="fm">
+        
+        <dl id="lib">
+            <dt><m><i> Code production:</i></m></dt>
+            <dd>{{liste.codeprod}}</dd>
+        </dl> 
+        <dl id="lib">
+            <dt><m><i>Date:</i></m></dt>
+            <dd>{{liste.dteprod}}</dd>
+        </dl> 
+        <dl id="lib">
+            <dt><m><i>Quantité produite:</i></m></dt>
+            <dd>{{liste.qte}}</dd>
+        </dl> 
+        <dl id="lib">
+            <dt><m><i>Quantité déchets:</i></m></dt>
+            <dd>{{liste.qtedechet}}</dd>
+        </dl> 
+
+
+    </form>
+    
+</div>
+
+{% endblock contenu %}

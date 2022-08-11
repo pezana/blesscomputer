@@ -1,0 +1,56 @@
+{% extends 'base.html' %} 
+{% block titre %}Approvisionnement/Detail{% endblock titre %} 
+{% block barbtn %}
+<input type="button" value="Retour">
+<input type="button" value="Imprimer">
+<input type="button" value="Ajouter">
+{% endblock barbtn %}
+ 
+
+<!-- debut du contenu de la page des details des approvisionnements -->
+{% block contenu %}
+
+<style>
+    .container {
+        position: relative;
+        top: 50px;
+        max-width: 600px;
+        border: 0px solid #00bcd4;
+        background-color: #efefef33;
+        padding: 15px;
+        overflow: auto;
+        margin: auto;
+        border-radius: 4px;
+        line-height: 60px;
+    }
+    #carl dt{
+        display: block;
+        width: 250px;
+        float: left;
+        text-align: right;
+        padding: 0 10px 00;
+        font-weight: bold;
+    }
+    #carl dl dd{
+        display: block;
+        width: 450px;
+        padding: 0;
+        margin: 00 10px 0;
+
+    }
+</style>
+
+    <div class ="container">
+            <dl id="carl">
+                <dt> Date:</dt>
+                <dd>{{ mondetail.dte }}</dd>
+                <dt> Cout d'achat :</dt>
+                <dd>{{ mondetail.coutachat }}</dd>
+                <dt> Cout supplementaire :</dt>
+                <dd>{{ mondetail.coutsupp }} </dd>
+                <dt> Fournissseur :</dt>
+                <dd>{{ mondetail.fournisseur }}</dd>
+            </dl>
+    </div>
+    <!-- fin du contenu de la page des details sur les approvisionnements -->
+{% endblock contenu %}

@@ -2,10 +2,6 @@
 <style>
     /* Style pour table fournisseur */
     
-    * {
-        box-sizing: border-box;
-    }
-    
     body>div {
         min-height: 100vh;
         display: flex;
@@ -122,7 +118,7 @@
                 <td>{{ elt.dteprod }}</td>
                 <td>
                     <span class="action_btn">
-                <a href="#">Detail</a>
+                <a href="{% url 'detailproduit' elt.id %}" >Detail</a>
               </span>
                 </td>
                 <td>

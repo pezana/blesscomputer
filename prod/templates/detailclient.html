@@ -1,0 +1,56 @@
+{% extends 'base.html' %} 
+{% block titre %}client/Detail{% endblock titre %} 
+{% block barbtn %}
+<input type="button" value="Ajouter">
+<input type="button" value="modifier">
+<input type="button" value="supprimer">
+{% endblock barbtn %}
+ 
+
+
+{% block contenu %}
+
+    <style>
+        .container {
+            position: relative;
+            top: 50px;
+            max-width: 600px;
+            border: 0px solid #00bcd4;
+            background-color: #efefef33;
+            padding: 15px;
+            overflow: auto;
+            margin: auto;
+            border-radius: 4px;
+            line-height: 60px;
+        }
+        #carl dt{
+            display: block;
+            width: 250px;
+            float: left;
+            text-align: right;
+            padding: 0 10px 00;
+            font-weight: bold;
+        }
+        #carl dl dd{
+            display: block;
+            width: 450px;
+            padding: 0;
+            margin: 00 10px 0;
+
+        }
+    </style>
+
+    <div class ="container">
+            <dl id="carl">
+                <dt> nom:</dt>
+                <dd>{{ maliste.nom }}</dd>
+                <dt> adresse :</dt>
+                <dd>{{ maliste.adress }}</dd>
+                <dt> telephone :</dt>
+                <dd>{{ maliste.tel }} </dd>
+                <dt> type de client :</dt>
+                <dd>{{ maliste.typeclient }}</dd>
+            </dl>
+    </div>
+    
+{% endblock contenu %}

@@ -16,5 +16,13 @@ urlpatterns = [
     path('Etape', fen_EtapeDeProduction.redirectionEtape, name='EtapeLien'),
     path('client', client.redirectionclient, name='clientLien'),
     path('stockVente', fen_stockAVendre.redirectionstockvente, name='stockeventeLien'),
-    path('detailetape/<id>', fen_EtapeDeProduction.voirDetail, name='undetail')
+    path('Fournisseur/<id>', fournisseur.voirfournisseur, name='detailfournisseur'),
+    path('detailsproduit/<id>', production.detailproduit, name='detailproduit' ),
+    path('detailetape/<id>', fen_EtapeDeProduction.voirDetail, name='undetail'),
+    path('detailclient/<id>', client.detailclient, name='maliste' ),
+    path('detailaprov/<id>', approv.voirApprov, name='mondetail'),
+    path('Fournisseur/<id>', fournisseur.voirfournisseur, name='detailfournisseur'),
+    path('detailsproduit/<id>', production.detailproduit, name='detailproduit' ),
+    path('detailetape/<id>', fen_EtapeDeProduction.voirDetail, name='undetail'),
+    path('detailclient/<id>', client.detailclient, name='detailclient' ),
 ]
