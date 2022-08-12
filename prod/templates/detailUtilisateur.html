@@ -7,7 +7,6 @@
 {% endblock barbtn %}
  
 
-<!-- debut du contenu de la page des details utilisateurs -->
 {% block contenu %}
 
 <style>
@@ -38,19 +37,17 @@
         margin: 00 10px 0;
 
     }
+
 </style>
 
     <div class ="container">
             <dl id="carl">
                 <dt> Profil:</dt>
-                <dd>{{ mondetail.profil }}</dd>
+                <dd>{{ monuser.profil }}</dd>
                 <dt> pseudo :</dt>
-                <dd>{{ mondetail.pseudo }}</dd>
+                <dd>{{ monuser.pseudo }}</dd>
                 <dt> mdepass :</dt>
-                <dd>{{ mondetail.mdepass }} </dd>
-                <dt> utilisateur:</dt>
-                <dd>{{ mondetail.utilisateur }}</dd>
+                <dd>{{ monuser.mdepass }} </dd>
             </dl>
     </div>
-    <!-- fin du contenu de la page des details sur les utilisateur -->
 {% endblock contenu %}

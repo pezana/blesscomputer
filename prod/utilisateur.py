@@ -10,7 +10,7 @@ def redirectionutilisateur(request):
 
 def voirUtilisateur(request, id):
      voir_Utilisateur = get_object_or_404(utilisateur, id = id)
-     return render(request,'detailUtilisateur.html', {'monutilisateur': voir_Utilisateur})   
+     return render(request,'detailUtilisateur.html', {'monuser': voir_Utilisateur})   
 
 
 
