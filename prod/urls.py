@@ -23,10 +23,16 @@ urlpatterns = [
     path('detailaprov/<id>', approv.voirApprov, name='mondetail'),
     path('Fournisseur/<id>', fournisseur.voirfournisseur, name='detailfournisseur'),
     path('detailclient/<id>', client.detailclient, name='detailclient' ),
+<<<<<<< HEAD
+    path('ajouterproduction',production.ajoutproduction,name='ajoutproductionlien'),
+    path('ajouterapprov',approv.ajoutapprov,name='ajoutapprovlien'),
+    
+=======
     path('detailutilisateur/<id>', utilisateur.voirUtilisateur, name='monuser'),
     path('ajouterproduction',production.ajoutproduction,name='ajoutproductionlien'),
     path('ajouterEtapeProd',fen_EtapeDeProduction.fonc_ajouter,name='Lien_Ajout_Etape'),
     path('ajouterclient', client.ajoutclient, name='ajoutclientlien'),
     path('ajouterfournisseur',fournisseur.ajoutfournisseur,name='ajoutfournisseurlien'),
     path('ajouterutilsateur',utilisateur.ajoututilisateur,name='ajoututilisateur'),
+>>>>>>> a786f2d9d9cfbeefde4771768a1cb5bbbc319312
 ]

@@ -1,7 +1,5 @@
-{% extends 'base.html' %} 
-{% block titre %} Approvisionnement {% endblock titre %} 
-{% block barbtn %}<input type="button" value="Ajouter"> {% endblock barbtn %}
-
+{% extends 'base.html' %} {% block titre %} Approvisionnement {% endblock titre %} {% block barbtn %}
+<a href="{% url 'ajoutapprovlien' %}">Ajouter</a> {% endblock barbtn %} 
 
 
 {%block contenu %}
@@ -19,7 +17,7 @@
         .table_responsive {
             position: relative;
             top: -27%;
-            max-width: 1040px;
+            max-width: 900px;
             border: 0px solid #00bcd4;
             background-color: #efefef33;
             padding: 15px;
