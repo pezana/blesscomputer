@@ -36,7 +36,7 @@
                 <a href="{% url 'stockeventeLien' %}">Stock vente</a>
             </li>
             <li>
-                <a href="">Utilisateur</a>
+                <a href="{% url 'utilisateurLien' %}">Utilisateur</a>
             </li>
             <li>
                 <a href="{% url 'clientLien' %}">Client</a>
@@ -56,6 +56,7 @@
         </div>
         {%block contenu %}{% endblock contenu %}
     </div>
+    
 </body>
 
 </html>

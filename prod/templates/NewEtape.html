@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block titre %}Etape de production/Ajout d'une Etape{% endblock titre %} 
+{% block barbtn %}
+<input type="button" value="Annuler">
+{% endblock barbtn %}
+
+{% block contenu %}
+    <!-- debut style -->
+    <style>
+        #msg {
+            background-color: green;
+        }
+        center{
+            margin-top: 12%;
+        }
+    </style>
+    <!-- fin style -->
+
+    <center>
+        <h2 id="msg">{{msg}}</h2>
+        <form action="{% url 'Lien_Ajout_Etape' %}" method="post" enctype="multipart/form-data" >
+            {% csrf_token%} {{ form.as_p}}
+            <label for=""></label>
+            <button type="submit">enregistrer</button>
+        </form>
+    </center>
+
+{%endblock contenu %}
