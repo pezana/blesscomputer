@@ -26,7 +26,6 @@ urlpatterns = [
     path('ajouterproduction',production.ajoutproduction,name='ajoutproductionlien'),
     path('ajouterapprov',approv.ajoutapprov,name='ajoutapprovlien'),
     path('detailutilisateur/<id>', utilisateur.voirUtilisateur, name='monuser'),
-    path('ajouterproduction',production.ajoutproduction,name='ajoutproductionlien'),
     path('ajouterEtapeProd',fen_EtapeDeProduction.fonc_ajouter,name='Lien_Ajout_Etape'),
     path('ajouterclient', client.ajoutclient, name='ajoutclientlien'),
     path('ajouterfournisseur',fournisseur.ajoutfournisseur,name='ajoutfournisseurlien'),
