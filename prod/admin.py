@@ -9,7 +9,7 @@ admin.site.register(production)
 admin.site.register(stockapp)
 admin.site.register(stockvente)
 admin.site.register(etape)
-
+admin.site.register(utilisateur)
 
 
 

@@ -39,6 +39,7 @@ class approvisionnement(models.Model) :
     coutachat=models.FloatField(blank=True)
     coutsupp=models.FloatField(blank=True) 
     fournisseur=models.ForeignKey(fournisseur,on_delete=models.CASCADE)
+    
 
 class stockapp(models.Model):
     qteapp=models.IntegerField(null=True) 

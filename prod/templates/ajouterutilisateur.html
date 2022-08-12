@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+ {% block titre %} utilsateur / ajouter une nouvel utilisateur {% endblock titre %} 
+ {% block barbtn %}{% endblock barbtn %} 
+ {%block contenu %}
+<style>
+    #msg {
+        background-color: green;
+    }
+    center {
+        margin-top: 3%;
+    }
+</style>
+<!-- fin du style  -->
+<center>
+    <h2 id="msg">{{msg}}</h2>
+    <form action="{% url 'ajoututilisateur' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token%} {{ form.as_p}}
+        <button type="submit">enregistrer</button>
+    </form>
+</center>
+
+{%endblock contenu %}
