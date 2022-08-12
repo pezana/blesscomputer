@@ -1,0 +1,20 @@
+{% extends 'base.html' %} {% block titre %} client / ajouter un nouveau client {% endblock titre %} {% block barbtn %}{% endblock barbtn %} {%block contenu %}
+<!--debut style-->
+<style>
+    #msg {
+        background-color: green;
+    }
+    center{
+        margin-top: 3%;
+    }
+</style>
+<!-- fin style-->
+<center>
+    <h2 id="msg">{{msg}}</h2>
+    <form action="{% url 'ajoutclientlien' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token%} {{ form.as_p}}
+        <button type="submit">enregistrer</button>
+    </form>
+</center>
+
+{%endblock contenu %}
