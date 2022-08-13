@@ -3,13 +3,28 @@
     #msg {
         background-color: green;
     }
+    .center{
+        margin-top: 15%;
+        margin-right: 10%;
+        box-shadow: inset 0 0 1em rgb(62, 37, 60), 0 0 2em rgb(11, 111, 153);
+        line-height: 20px;
+        width: 40%;
+        height: 30%;
+        margin-left: 20%;
+    }
+    
+    
 </style>
-<center>
+
+<center class="center">
+    
     <h2 id="msg">{{msg}}</h2>
-    <form action="{% url 'ajoutproductionlien' %}" method="post" enctype="multipart/form-data">
+    
+    <form action="{% url 'ajoutproductionlien' %}" method="post" enctype="multipart/form-data" class="form">
         {% csrf_token%} {{ form.as_p}}
         <button type="submit">enregistrer</button>
     </form>
 </center>
+
 
 {%endblock contenu %}

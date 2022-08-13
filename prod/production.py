@@ -1,3 +1,5 @@
+from logging import PlaceHolder
+from re import A
 from django.shortcuts import render
 from .models import *
 from django import forms
@@ -12,13 +14,27 @@ def detailproduit(request, id):
      return render(request,'detailsProduction.html',{'liste':undetail})
 
 class ajoutproductionform(forms.Form):     
-     codeprod=forms.CharField(label='code de la production',required=True)
-     qte=forms.IntegerField()
-     dteprod=forms.DateField()
-     qtedechet=forms.IntegerField()
-    
-          
-     
+     codeprod=forms.CharField(label='',required=True, widget=forms.TextInput( 
+          attrs={
+               'PlaceHolder': 'code de la production',
+               
+          }))
+     qte=forms.IntegerField(label='',required=True, widget=forms.TextInput( 
+          attrs={
+               'PlaceHolder': 'Quantité de produits obenue',
+               
+          }))
+     dteprod=forms.DateField(label='',required=True, widget=forms.TextInput( 
+          attrs={
+               'PlaceHolder': 'date de la production',
+              
+          }))
+     qtedechet=forms.IntegerField(label='',required=True, widget=forms.TextInput( 
+          attrs={
+               'PlaceHolder': 'Quantité de dechets',
+               
+          }))
+
 def ajoutproduction(request):
      form=ajoutproductionform()
      if request.POST:
