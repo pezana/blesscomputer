@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+ {% block titre %} Approvisionnement / ajouter un nouveau approvisionnement {% endblock titre %} 
+ {% block barbtn %}{% endblock barbtn %} 
+ {%block contenu %}
+
+ <!-- le style  du formulaire et du message qui s'affice lors de l'enregistrement -->
+<style>
+    #msg {
+        background-color: green;
+        margin-top: 3%;
+    }
+    #formulaire {
+        margin-top: 5%;
+    }
+</style>
+<!-- fin du style -->
+
+<!-- ------------------------------------------------------------------------------------------------ -->
+<!-- debut du formulaire d'enregistrement des approvisionnements -->
+<center>
+    <h2 id="msg">{{msg}}</h2>
+    <form action="{% url 'ajoutapprovlien' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token%} {{ form.as_p}}
+        <button type="submit">enregistrer</button>
+    </form>
+</center>
+<!-- fin du formulaire d'enregistrement des approvisionnements -->
+
+{%endblock contenu %}
